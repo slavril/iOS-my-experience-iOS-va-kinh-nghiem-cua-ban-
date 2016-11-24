@@ -84,15 +84,15 @@ mỗi Model sẽ phải đăng kí với một NSManagedObjectContext, có thể
 
 không có coredata, bạn có thể tự viết cho mình chương trình để quản lý dữ liệu cũng được, nhưng chắc chắn nó sẽ cực thấy m, vì sao, vì bạn sẽ phải tự quản lý tất cả, pla pla pla.
 
-##các lưu ý.
--muốn lưu dữ liệu của 1 model vào store, hãy chắn chắn model đó đang được xử lý trên NSManagedObjectContext của chính nó.
--NSManagedObjectContext có thể chạy trên nhiều luồng xử lý khác nhau, nên có thể, việc lưu data trên model dựa trên nhiều NSManagedObjectContext khác nhau có thể phát sinh lỗi không mong muốn.
+##Các lưu ý.
+- muốn lưu dữ liệu của 1 model vào store, hãy chắn chắn model đó đang được xử lý trên NSManagedObjectContext của chính nó.
+- NSManagedObjectContext có thể chạy trên nhiều luồng xử lý khác nhau, nên có thể, việc lưu data trên model dựa trên nhiều NSManagedObjectContext khác nhau có thể phát sinh lỗi không mong muốn.
 
-##so sánh một chút tổng quan về việc sử dụng coredata và sql query
-1: coredata có tốc độ truy suất nhanh hơn nhất là với những bảng đòi hỏi truy suất dữ liệu liên tục.
-2: coredata và sql query đều dễ dàng viết các câu lệnh truy vấn tới CSDL, tuy nhiên, coredata hỗ trợ truy vấn csdl theo dạng truy vấn một object, tức là bảng.thuộc tính hoặc là bảng.bảng.thuộc tính.
-3: sql query có thể viết các procedure để hỗ trợ truy vấn, hoặc trigger để hỗ trợ quản lý db
-4: cả sql query và coredata đều có thể dùng trên các hệ thống app từ lớn đến nhỏ, nhưng nên nhớ, việc nâng cấp một hệ thống dùng sql query đòi hỏi nhiều công sức hơn, vì phải transfer dữ liệu từ mộ version cũ lên bảng mới hơn. với coredata, việc đó là không cần thiết nữa.
+##So sánh một chút tổng quan về việc sử dụng coredata và sql query
+- Coredata có tốc độ truy suất nhanh hơn nhất là với những bảng đòi hỏi truy suất dữ liệu liên tục.
+- Voredata và sql query đều dễ dàng viết các câu lệnh truy vấn tới CSDL, tuy nhiên, coredata hỗ trợ truy vấn csdl theo dạng truy vấn một object, tức là bảng.thuộc tính hoặc là bảng.bảng.thuộc tính.
+- Sql query có thể viết các procedure để hỗ trợ truy vấn, hoặc trigger để hỗ trợ quản lý db
+- Cả sql query và coredata đều có thể dùng trên các hệ thống app từ lớn đến nhỏ, nhưng nên nhớ, việc nâng cấp một hệ thống dùng sql query đòi hỏi nhiều công sức hơn, vì phải transfer dữ liệu từ mộ version cũ lên bảng mới hơn. với coredata, việc đó là không cần thiết nữa.
 
 #Block
 
