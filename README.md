@@ -93,3 +93,27 @@ không có coredata, bạn có thể tự viết cho mình chương trình để
 2: coredata và sql query đều dễ dàng viết các câu lệnh truy vấn tới CSDL, tuy nhiên, coredata hỗ trợ truy vấn csdl theo dạng truy vấn một object, tức là bảng.thuộc tính hoặc là bảng.bảng.thuộc tính.
 3: sql query có thể viết các procedure để hỗ trợ truy vấn, hoặc trigger để hỗ trợ quản lý db
 4: cả sql query và coredata đều có thể dùng trên các hệ thống app từ lớn đến nhỏ, nhưng nên nhớ, việc nâng cấp một hệ thống dùng sql query đòi hỏi nhiều công sức hơn, vì phải transfer dữ liệu từ mộ version cũ lên bảng mới hơn. với coredata, việc đó là không cần thiết nữa.
+
+#Block
+
+##Block có thể hiểu là closure như khái niệm của các loại ngôn ngữ lập trình khác. Đúng là khá xoắn thật.
+
+=> Dịch ra đại thể là closure là một hàm hoặc một tham chiếu (hay còn gọi là một cái bao đóng) đi kèm với cái môi trường mà nó tham chiếu đến (khá là xoắn). Cái cần nhấn mạnh ở đây là cái referencing environment (môi trường tham chiếu).
+(tham khảo từ: http://ktmt.github.io/blog/2013/05/12/closure-va-scope-cua-javascript/)
+
+Block đơn giản không phải GCD. GCD chỉ là đang dùng block ứng dụng vào mà thôi
+
+##Ưu điểm
+- Block giúp code của bạn dễ đọc, nhưng đó là với một block xử lý ít dữ liệu và đơn giản, một block quá nhiều thứ phải xử lý hoặc nhiều block lồng nhau chỉ khiến cho app bạn rối nùi lên và tiêu tùng mà thôi.
+- Block tốt nhất là giúp dev chúng ta, giảm line, code gọn, dễ bắt bug.
+- Obj-C, có hai cách để một đối tượng có thể đưa ra kết quả của mình (callback) 1 là thông qua selector và target, hai là delegate. Một ngày nào đó mình sẽ nói rõ hơn về 2 thứ này, trước mắt mặt định các bạn hiểu chúng là gì đã. Cách sử dụng hai kĩ thuật này vô cùng phức tạp và nhiều bước, đơn giản hơn thì bạn hãy thử dụng block như một cách callback lại request.
+- Giống closure, mọi giá trị được khởi tạo trước khi thực hiện callback đều có thể được sử dụng bên trong block.
+
+##Một số chỗ có thể sử dụng block.
+- Khi nào bạn cần callback, dùng block.
+- Dùng emulator cùng với block để có thể duyệt qua một danh sách, nếu như bạn cảm thấy là việc duyệt danh sách không quan tâm thứ tự.
+- Complete handler và failure handler.
+- Block trong obj-c có cú pháp kinh hoàng, cho nên, hãy nhớ nếu bạn cần sử dụng một block lặp đi lặp lại nhiều lần, hãy sử dụng cú pháp typedef để định sẵng những block đó.
+
+(còn tiếp)
+
