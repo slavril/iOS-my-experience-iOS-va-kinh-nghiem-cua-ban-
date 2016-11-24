@@ -115,5 +115,9 @@ Block đơn giản không phải GCD. GCD chỉ là đang dùng block ứng dụ
 - Complete handler và failure handler.
 - Block trong obj-c có cú pháp kinh hoàng, cho nên, hãy nhớ nếu bạn cần sử dụng một block lặp đi lặp lại nhiều lần, hãy sử dụng cú pháp typedef để định sẵng những block đó.
 
+#Một chút kinh nghiệm về thực hiện một project trong XCode
+Tham khảo: https://github.com/futurice/ios-good-practices
+
+
 (còn tiếp)
 
