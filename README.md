@@ -1,12 +1,12 @@
 #GCD
-##Apple cơ bản mô tả Grand Central Dispatch (GCD) như sau: 
-- Xử lý luồng rất khó, xài GCD dễ hơn nhiều.
-- GCD không thẻ thư viên hỗ trợ xử lý luồng hay viết lại kĩ thuật xử lý luồng.
-- GCD sử dụng luồng, nhưng mà ơn trời, dev không bao giờ cần phải cố mà xử lý luồng như trước.
-- GCD là một thư viện hỗ trợ xử lý đồng thời hướng theo mô hình FIFO.
+##Về cơ bản Apple mô tả Grand Central Dispatch (GCD) như sau: 
+- Như chúng ta đã biết, xử lý đa luông trong lập trình thực sự rất khó, chính vì vậy, Apple đã tạo ra, và cho rằng Grand Central Dispatch (GCD) sẽ giúp quá trình này trở nên dễ dàng hơn, thông qua các kĩ thuật mới.
+- GCD hoàn toàn không phải một thư viện hỗ trợ viết xử lý đa luồng hay viết lại kĩ thuật xử lý đa luồng.
+- GCD có sử dụng luồng trong xử lý của nó, nhưng mà ơn trời, dev không bao giờ cần phải cố mà code như trước.
+- GCD hỗ trợ chúng ta xử lý đồng thời trong lập trình hướng theo mô hình FIFO.
 
-Cơ chế cơ bản của GCD nói nôm na dễ hiểu là nó chèn một hoặc nhiều blocks vào hàng đợi xử lý sau đó thực hiện chúng rồi sẽ trả ra dạng callback.
-Có nhiều cách để chèn block vào và cũng có nhiều kiểu hàng đợi khác nhau
+Cơ chế cơ bản của GCD nói nôm na dễ hiểu là nó submit một hoặc nhiều blocks vào hàng đợi sau đó thực hiện tác vụ và trả về giá trị theo kiểu callback-block.
+GCD hỗ trợ nhiều cách để submit block vào và cũng có nhiều kiểu hàng đợi khác nhau, phục vụ cho nhiều mục đích khác nhau.
 Nói tóm lại, là dev chỉ cần sắp xếp cho một task để được xử lý gửi vào trong hàng đợi (dispatch), và thì cứ để GCD làm việc thôi, sau đó callback ra và chúng ta chỉ việc handle.
 
 Điều thú vị ở đây là khi dev, chúng ta thấy có vẻ như nó được xử lý đồng thời, luồng được gọi, xử lý tự động và cân bằng phù hợp với khả năng của hệ thống. Nhưng có một lưu ý, là khi muốn xử lý vấn đề về hiển thị, UI nên và phải luôn được xử lý trên main queue (cái này sẽ nói rõ hơn và phần sau). Đồng thời là bạn phải luôn kiểm tra tài liệu xem cái Object NS hoặc UI mà bạn đang cần thực hiện đó có an toàn để xử lý trên đa luồng hay không (coi các phần sau để biết chi tiết hơn).
