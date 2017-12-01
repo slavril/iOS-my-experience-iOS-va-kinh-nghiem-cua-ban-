@@ -6,7 +6,7 @@ Core data stack là một tập hợp của những object trong app mà có th�
 
 Cách khởi tạo coi https://developer.apple.com/library/content///documentation/Cocoa/Conceptual/CoreData/InitializingtheCoreDataStack.html#//apple_ref/doc/uid/TP40001075-CH4-SW1
 
-Giờ mình sẽ mô tả cụ thể từng cái trong stack nó làm gì.
+Giờ mình sẽ mô tả cụ thể từng cái trong stack nó làm gì. Trước tiên, bạn nên đặt suy nghĩ của mình như một nhà quản lý và tư vấn ngành hậu cần logistic.
 
 ##Đầu tiên là NSManagedObjectModel cơ bản thì NSManagedObjectModel nó sẽ mô tả nên cái dữ liệu mà chúng ta sẽ truy suất thông qua CoredataStack (có thể nói nó gần giống với database table), thường được gọi với cái tên trìu mến là “mom” (má). khi chúng ta khởi tạo một cái core data stack (coi như là một phiên xủ lý đi, dịch khó quá), core data sẽ load tất cả NSManagedObjectModel lên ram - memory, âm thầm tải lên tất cả dữ liệu của bạn dưới dạng một bảng copy, tăng hiệu suât đọc (cái này liên quan tới context nữa, nói ở sau nhé), đây là một ưu thế đã nói ở trên của core data, khi mà model được khởi tạo và load lên, thì ngay lập tức (store coordinator) cũng sẽ nhanh chóng được cấu trúc và khởi tạo tương ứng.
 
