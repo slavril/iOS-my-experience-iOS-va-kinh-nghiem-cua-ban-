@@ -5,17 +5,18 @@
 - GCD có sử dụng luồng trong xử lý của nó, nhưng mà ơn trời, dev không bao giờ cần phải cố mà code như trước.
 - GCD hỗ trợ chúng ta xử lý đồng thời trong lập trình hướng theo mô hình FIFO.
 
-Cơ chế cơ bản của GCD nói nôm na dễ hiểu là nó submit một hoặc nhiều blocks vào hàng đợi sau đó thực hiện tác vụ và trả về giá trị theo kiểu callback-block.
-GCD hỗ trợ nhiều cách để submit block vào và cũng có nhiều kiểu hàng đợi khác nhau, phục vụ cho nhiều mục đích khác nhau.
-Nói tóm lại, là dev chỉ cần sắp xếp cho một task để được xử lý gửi vào trong hàng đợi (dispatch), và thì cứ để GCD làm việc thôi, sau đó callback ra và chúng ta chỉ việc handle.
+Cơ chế cơ bản của GCD nôm na dễ hiểu là nó đưa một hoặc nhiều blocks vào hàng đợi, thực hiện các tác vụ rồi trả ra giá trị (callback-block).
 
-Điều thú vị ở đây là khi dev, chúng ta thấy có vẻ như nó được xử lý đồng thời, luồng được gọi, xử lý tự động và cân bằng phù hợp với khả năng của hệ thống. Nhưng có một lưu ý, là khi muốn xử lý vấn đề về hiển thị, UI nên và phải luôn được xử lý trên main queue (cái này sẽ nói rõ hơn và phần sau). Đồng thời là bạn phải luôn kiểm tra tài liệu xem cái Object NS hoặc UI mà bạn đang cần thực hiện đó có an toàn để xử lý trên đa luồng hay không (coi các phần sau để biết chi tiết hơn).
+GCD hỗ trợ nhiều cách để đưa block vào hàng đợi, có nhiều kiểu hàng đợi khác nhau và phục vụ cho nhiều mục đích khác nhau.
+Tóm lại, là lập trình viên chỉ cần sắp xếp các tác vụ cần được xử lý đưa vào trong hàng đợi (dispatch), GCD sẽ làm việc của nó, kết quả được trả về và dữ liệu mới được sử dụng cho các bước tiếp.
+
+Điều thú vị ở đây là khi lập trình, chúng ta thấy như nó được xử lý đồng thời, luồng được gọi, xử lý tự động và cân bằng phù hợp với khả năng của hệ thống. Có một lưu ý, là khi xử lý vấn đề về hiển thị, UI nên và phải luôn được thực hiện trên main queue (cái này sẽ nói rõ hơn và phần sau). Đồng thời là bạn phải luôn kiểm tra tài liệu xem  Object NS hoặc UI mà đang cần thực hiện có an toàn để xử lý trên đa luồng hay không (coi các phần sau để biết chi tiết hơn).
 
 Cách khởi tạo hoặc gọi ra một hàng đợi.
 Có 2 loại (serial queues: xếp hàng đợi tới lượt) và (concurrent queues: xếp hàng thích gọi đứa nào thì gọi), hai cái tên nói lên tất cả.
 
-Loại 1 (serial queues): nếu bạn thêm vào một loạt task cần thực hiện, mỗi một lúc nó sẽ chỉ lấy ra một cái để xử lý, giống như khi bạn xếp hàng mua KFC vậy, chỉ khi nào cái task được xử lý xong, được trả ra và hoàn thành, nó mới lôi một cái khác ra xử lý tiếp (đứa nào tới trước, xử lý trước, FIFO). 
-Bạn chỉ cần gọi dispatch_queue_create là tạo được một cái kiểu này. (nhiều hàng đợi có thể chuyển qua chuyển lại giữa nhiều thread ngay giữa những task khác nhau, nhưng nó luôn đảm bảo trong cùng 1 hàng đợi, thì thằng trước xong mới tới thằng sau: nôm na là mình tạo ra 10 queue thì khi 10 cái đó chạy, nó chạy trên nhiều thread khác nhau, có thể chỉ có 3 thread thôi, nên 10 queue giành nhau chạy xen kẻ). Kiểu này rất hay, đỡn nhọc công cho dev trong việc xử lý đa luồng với nhau, mình đã từng làm qua xử lý đa luồng trên C++ và đó quả thực là một cực hình. Với GCD, chỉ đơn giản là add vào và viết tiếp, so easy.
+Loại 1 (serial queues): nếu bạn thêm vào một loạt vụ cần thực hiện, mỗi một lúc nó sẽ chỉ lấy ra một cái để xử lý, giống như khi xếp hàng mua KFC vậy, chỉ khi nào tác vụ được xử lý xong, được trả ra và hoàn thành, nó mới lấy một cái khác liền kề ra xử lý tiếp (đứa nào tới trước, xử lý trước, FIFO).
+Bạn chỉ cần gọi dispatch_queue_create là tạo được một cái kiểu này. (nhiều hàng đợi có thể chuyển qua chuyển lại giữa nhiều thread ngay giữa những task khác nhau, nhưng nó luôn đảm bảo trong cùng 1 hàng đợi, thì thằng trước xong mới tới thằng sau: nôm na là mình tạo ra 10 queue thì khi 10 cái đó chạy, nó chạy trên nhiều thread khác nhau, có thể chỉ có 3 thread thôi, nên 10 queue giành nhau chạy xen kẻ). Kiểu này rất hay, đỡn nhọc công cho chúng ta trong việc xử lý đa luồng với nhau, mình đã từng làm qua xử lý đa luồng trên C++ và đó quả thực là một cực hình. Với GCD, chỉ đơn giản là add vào và viết tiếp, so easy.
 
 Main queue là một cái hàng đợi kiểu này nhưng đặc biệt hơn, những hàng đợi khác có thể nằm trên nhiều thread khác nhau trong một lúc nhưng main queue thì chỉ có một, và nó duy nhất chạy trên main thread (main thread là luồng mạnh nhất và được ưu tiên nhất, apple luôn cho UI chạy trên đó là để tạo trải nghiệm tốt nhất), đó chính là lý do vì sao khi bạn chạy một cái tác vụ nặng mà trên main queue sẽ có thể làm treo UI lại, vì nếu theo lý thuyết về serial queues, UI sẽ phải đợi task xong thì mới tiếp tục thực hiện các phản hồi được.
 
