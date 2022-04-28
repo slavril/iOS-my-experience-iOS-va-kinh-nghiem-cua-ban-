@@ -1,13 +1,13 @@
 Series giới thiệu về phát triển phầm mềm trên iOS, ngắn gọn và bằng tiếng việt.
 
-##ARC
+## ARC
 Automatic Reference Counting hay viết tắt là (ARC), nói ngắn gọn là tính năng quản lí bộ nhớ mà Apple cung cấp cho Xcode, nhằm thay thế cho cách quản lý thủ công bằng tay như trước đây.
 Cơ chế hoạt động cơ bản là khi một object/instance (đối tượng) được khởi tạo, nó sẽ được quản lý bởi ARC, mỗi một reference (liên kết) đến đối tượng đó, sẽ được tính là 1 số reference count/retain count. Khi liên kết được huỷ bỏ, reference count giảm xuống 1, cho tới khi nó bằng 0, vùng nhớ dành cho đối tượng đó được huỷ bỏ.
 
-##Memory leak
+## Memory leak
 Cơ chế trên hoạt động hoàn hảo, giúp hệ thống giải phóng bộ nhớ khi không còn liên kết nào tới đối tượng, nhưng đôi khi trong một lúc thần kì nào đó, reference count bị neo giữ ở 1 và không bao giờ về không, tức vẫn còn có liên kết tới đối tượng, nhưng chương trình của bạn, thực tế không còn sử dụng đến nó nữa, chúng ta gọi là reference cycle/retain cycle.
 
-##Funfact
+## Funfact
 * Objective-C/Swift ARC là compile time hay runtime: compile.
 * Closure/block cũng là một reference, nên khi sử dụng phải chú ý, còn cách làm thì bạn hãy GG nó.
 * Strong là mạnh, Weak là yếu
