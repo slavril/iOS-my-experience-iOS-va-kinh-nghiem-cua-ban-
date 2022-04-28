@@ -14,3 +14,5 @@ Khi mà hiện tượng reference cycle/retain cycle xảy ra, mình gọi là m
 * Strong là mạnh, Weak là yếu
 * dealloc, là một phương thức được gọi khi mà reference count của một đối tượng về 0.
 * Để kiểm tra memory leak, bạn có thể dùng công cụ Xcode Instruments.
+
+280422
