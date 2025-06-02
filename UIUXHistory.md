@@ -14,6 +14,14 @@ Okay, mấy bồ làm sao biết Homosapien tiền sử thích săn voi - nhờ 
 
 _Trong số má thì chả có nghệ thuật gì cả đâu_
 
-Đúng rồi, số này 0, 1 này, rồi chữ này func, value này, quá khô khan, quá nhợt nhạt, để lại cho chính tôi một cảm giác rằng viên kế toán cần mẫn nhất của công ty tôi hẳn là con người trầm cảm và buồn chán cuộc đời nhất thế gian này. Ấy vậy mà
+Đúng rồi, số này 0, 1 này, rồi chữ này func, value này, quá khô khan, quá nhợt nhạt, để lại cho chính tôi một cảm giác rằng viên kế toán cần mẫn nhất của công ty tôi hẳn là con người trầm cảm và buồn chán cuộc đời nhất thế gian này. Và cái việc nhàm chán đó vẫn cứ diễn ra mãi cho tới
 
+### Trước năm 1970: Giao diện dòng lệnh (Command-Line Interface - CLI)
 
+Thời của dòng lệnh, tôi chưa sinh ra. Nhưng những con số khô khan, giờ đã có thể tương tác với loài người - lần đầu tiên. Trước khi việc nhập liệu sẽ phải là dùng một công cụ như cây xiêng thịt, đâm thủng 1 lỗ vào tấm bìa giấy cứng, dĩ nhiên, theo một nguyên lý mà chỉ những người ngày xưa mới rành. Sau đó đưa tấm bìa cạc tông cũ sờn còn hơn cái điện thoại của tôi vào trong chiếc khe của - cái mà họ gọi là - Máy cơ điện - máy tính đầu tiên. À còn một cách nữa, đó là bấm những công tắc gạt, để ra lệnh cho máy tính đầu tiên :D, quá là nhạt nhẽo. Quên nữa là một chiếc _máy tính_ thời đó lớn cỡ 1 nhà máy nhỏ hiện nay.
+
+Xong, chúng ta tới một thời kỳ xịn hơn, với các thiết bị mới gọi là console, và vẫn chưa có gì mới, ngoại trừ chúng bé hơn và bắt đầu có khái niệm giao diện người dùng xuất hiện, ấy các bạn không nên hiểu nhầm, chúng chỉ là controller board thôi, tức là mấy cái nút tắt mở búa xua như máy bay trên phim Hollywood ấy, đúng vậy, thời đó những Designer sẽ phải thiết kế những bản mạch đầu vào, còn tôi sẽ là người gạt mấy cái cần vui vui đấy đấy.
+
+Và rồi, một vị thánh xuất hiện
+
+Cuối những năm 60, Douglas Engelbart (1968) đã giới thiệu một khái niệm mới, mấy bạn designer nhớ ổng nhé, ổng là một Kỹ sư đấy
