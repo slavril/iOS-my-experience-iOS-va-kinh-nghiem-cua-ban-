@@ -28,7 +28,7 @@ Cuối những năm 60, Douglas Engelbart (1968) đã giới thiệu một khái
 
 (HCI) chú trọng vào nghiên cứu cho phép người dùng tech - non tech, thao tác được với máy tính theo một cách thần kỳ nào đó, và nó đã trở thành một chủ đề siêu hót từ thời ấy, nhiều bài báo cáo, nghiên cứu khoa học ra đời, và từ đó người ta sinh ra một khái niệm siêu mới **human–computer interface**, và mục đích tối thượng của HCI không gì hơn là giới thiệu cho một người tương đương như mẹ tôi viết được Javascript trên máy tính ngày nay ấy.
 
-Nhưng mấy bạn đừng nhầm, HCI chỉ dừng ở nghiên cứu lý thuyết, nó không và cũng chưa bao giờ được gọi là Giao diện đồ họa hay GUI thực sự, và nó chỉ dành cho những người được cho rằng thông minh nhất trái đất.
+Nhưng mấy bạn đừng nhầm, HCI chỉ dừng ở nghiên cứu lý thuyết, nó không và cũng chưa bao giờ được gọi là Giao diện đồ họa hay GUI thực sự, và nó chỉ dành cho những người được cho rằng thông minh nhất trái đất. Nhưng những nghiên cứu sơ khai ấy, đã mở đường cho một khái niệm mới, UX - hay Trải nghiệm người dùng.
 
 ## Những năm 1970s - 1980s: Giao diện đồ họa đầu tiên (GUI – Graphical User Interface)
 
@@ -40,7 +40,27 @@ Mãi một thời gian dài sau đó vào năm 1984 – Apple Macintosh ra đờ
 
 1985 – Microsoft Windows 1.0, một bản copy nhưng rẻ hơn nhiều của Apple Macintosh
 
-Reply 198x, Trong suốt những năm tháng đó, mọi thứ giao tiếp giữa Homosapien và Computersapien đã bắt đầu dịch từ những con chữ qua hình ảnh trực quan, mọi thứ trở nên dễ dùng hơn rất nhiều lần
+Reply 198x, Trong suốt những năm tháng đó, mọi thứ giao tiếp giữa Homosapien và Computersapien đã bắt đầu dịch từ những con chữ qua hình ảnh trực quan, mọi thứ trở nên dễ dùng hơn rất nhiều lần, người dùng trở nên đông đảo hơn và nghề mới ra đời, UI designer, họa sĩ thiết kế giao diện người dùng, tại sao gọi là họa sĩ, vì thời gian đó, tất cả những ông bạn vẽ UI cho máy tính đều 100% họa sĩ nhé, với máu nghệ thuật cao ngút trời.
+
+## Những năm 199x, GUI thành tiêu chuẩn
+
+Windows đẹp hơn, MacOS thì ngày càng chuẩn hơn, hoàn thiện và mạnh mẽ hơn. Khái niệm web ra đời (với không có CSS), đa phần UI vẫn chỉ xoay quanh phần mềm máy tính và con người ta chưa chú trọng nhiều vào trả nghiệm, giống như mù vừa mổ mắt ấy, đẹp xấu không quan trọng, quan trọng là trông coi được.
+
+## Những năm 2000s, Bùng nổ
+
+Rất nhiều nền tảng ứng dụng UI/UX ra đời, web nè, Flash Adobe thần thánh nè, rồi phần mềm windows thì suốt ngày skin với theme màu mè hoa lá hẹ, UX được đẩy lên tầm thời thượng, còn họa sĩ thì bắt đầu không còn làm UI design nữa (vì nó làm tổn thương lòng tự trọng trong họ). À xém tí quên còn Nokia điện thoại màn hình tí hon các kiểu nữa, bắt đầu chú trọng hơn vào thiết kế UI. Nếu sinh ra vào thời đó, chứ 10 đứa có điện thoại, thì 9 đứa cài theme, đứa còn lại không biết cài nên buông bỏ, việc thiế kế giao diện người dùng trở nên siêu đơn giản nhờ những sự đầu tư cực lớn của tất cả ban ngành và xã hội. Đến con tôi nếu sinh vào lúc đó chắc cũng biết làm giao diện web ấy chứ.
+
+## 2007 - iPhone ra đời
+
+Tôi vẫn nhớ cái ngày Steve trình bày về chiếc phone nhỏ bé của ông ấy, nó thực sự khiến người ta nổi gai ốc. Không phải lần đầu tiên điện thoại ra đời, cũng không phải lần đầu tiên màn hình cảm ứng xuất hiện. Vậy điều gì đặc biệt.
+
+Đó chính là cách iPhone xây dựng nên bộ giao diện người dùng và thay đổi cách chúng ta tương tác với thiết bị vô tri, mãi mãi. Lướt qua phải để đổi hình khác, một cái chạm nhẹ lên màn hình để nghe nhạc, và cả ti tỉ thứ khác. Công lao lớn nhất không đâu khác, đến từ những UI/UX designer của Apple khi ấy, với tôi, giờ họ là những nghệ sĩ thực thụ. Thông minh hơn, đẹp hơn, dễ sử dụng hơn so với những năm 70 với bìa đục lỗ. Không còn phải khẹt khẹt với thằng bạn thân, thay vào đó giờ ta có thể hát một bài hát với anh bạn Ka ở nhà.
+
+Tất cả những năm tháng ấy, thực sự rất rực rỡ...
+
+## 2010s: UX bùng nổ và thiết kế hướng người dùng
+
+Đó là những năm mà UX trở thành một ngành/đề tài riêng, cùng song song với UI
 
 
 
