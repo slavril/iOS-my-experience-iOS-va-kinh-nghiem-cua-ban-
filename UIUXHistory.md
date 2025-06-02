@@ -22,6 +22,26 @@ Thời của dòng lệnh, tôi chưa sinh ra. Nhưng những con số khô khan
 
 Xong, chúng ta tới một thời kỳ xịn hơn, với các thiết bị mới gọi là console, và vẫn chưa có gì mới, ngoại trừ chúng bé hơn và bắt đầu có khái niệm giao diện người dùng xuất hiện, ấy các bạn không nên hiểu nhầm, chúng chỉ là controller board thôi, tức là mấy cái nút tắt mở búa xua như máy bay trên phim Hollywood ấy, đúng vậy, thời đó những Designer sẽ phải thiết kế những bản mạch đầu vào, còn tôi sẽ là người gạt mấy cái cần vui vui đấy đấy.
 
-Và rồi, một vị thánh xuất hiện
+### Và rồi, một vị thánh xuất hiện
 
-Cuối những năm 60, Douglas Engelbart (1968) đã giới thiệu một khái niệm mới, mấy bạn designer nhớ ổng nhé, ổng là một Kỹ sư đấy
+Cuối những năm 60, Douglas Engelbart (1968) đã giới thiệu một khái niệm mới **human–computer interaction** (HCI), hay còn gọi là giao diện tương tác người-máy, mấy bạn designer nhớ ổng nhé, ổng là một Kỹ sư đấy (https://en.wikipedia.org/wiki/Douglas_Engelbart)
+
+(HCI) chú trọng vào nghiên cứu cho phép người dùng tech - non tech, thao tác được với máy tính theo một cách thần kỳ nào đó, và nó đã trở thành một chủ đề siêu hót từ thời ấy, nhiều bài báo cáo, nghiên cứu khoa học ra đời, và từ đó người ta sinh ra một khái niệm siêu mới **human–computer interface**, và mục đích tối thượng của HCI không gì hơn là giới thiệu cho một người tương đương như mẹ tôi viết được Javascript trên máy tính ngày nay ấy.
+
+Nhưng mấy bạn đừng nhầm, HCI chỉ dừng ở nghiên cứu lý thuyết, nó không và cũng chưa bao giờ được gọi là Giao diện đồ họa hay GUI thực sự, và nó chỉ dành cho những người được cho rằng thông minh nhất trái đất.
+
+## Những năm 1970s - 1980s: Giao diện đồ họa đầu tiên (GUI – Graphical User Interface)
+
+Tôi thường nhớ lại những ngày đầu tiên sử dụng máy tính, khi đó bắt đầu với MS-DOS và windows 1.0, thật vinh dự khi bước vào hàng ngũ những người siêu siêu đầu tiên ở Việt Nam này, những người thực sự lần đầu làm việc với GUI.
+
+1973 – Xerox Alto: Máy tính đầu tiên có GUI (biểu tượng, cửa sổ, chuột) ra đời. Nó như cuộc cách mạng vậy, kiểu như đang vẽ tranh lớp 1, ngôi nhà và 2 hàng cây xong đùng phát bạn thành họa sĩ chuyên nghiệp 5 năm học ĐH kiến trúc vậy, lúc đó máy tính không phổ biến, thậm chí chủ tịch nước Việt Nam khi ấy có khi còn chưa có chiếc nào.
+
+Mãi một thời gian dài sau đó vào năm 1984 – Apple Macintosh ra đời, trời ơi bạn không nghe nhầm đâu, chính là Apple đấy. Nó là chiếc máy "dành - cho - người - nghèo" thực thụ đầu tiên ra đời, nó sau này được đổi tên thành Macintosh 128K, nhưng ... who care, quan trọng là cách mà Apple đã thay đổi chúng ta, lúc đó, hiện tại, và mãi mãi về sau. Nó cung cấp cho mọi người một GUI đúng nghĩa, giao diện cửa sổ, nút bấm, nhập văn bản ... nhiều hơn những gì mà iphone có thể làm được ở thời điểm hiện tại. Thậm chí, mỗi khi nhắc lại thời gian đó, tôi vẫn cảm thấy bồi hồi.
+
+1985 – Microsoft Windows 1.0, một bản copy nhưng rẻ hơn nhiều của Apple Macintosh
+
+Reply 198x, Trong suốt những năm tháng đó, mọi thứ giao tiếp giữa Homosapien và Computersapien đã bắt đầu dịch từ những con chữ qua hình ảnh trực quan, mọi thứ trở nên dễ dùng hơn rất nhiều lần
+
+
+
+
