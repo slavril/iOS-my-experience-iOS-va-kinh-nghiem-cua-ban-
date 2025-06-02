@@ -60,7 +60,15 @@ Tất cả những năm tháng ấy, thực sự rất rực rỡ...
 
 ## 2010s: UX bùng nổ và thiết kế hướng người dùng
 
-Đó là những năm mà UX trở thành một ngành/đề tài riêng, cùng song song với UI
+Đó là những năm mà UX trở thành một ngành/đề tài riêng, cùng song song với UI. Các hãng lớn đua nhau tung ra các bản cập nhật tối ưu hóa về trải nghiệm hơn, phẳng hơn, phản hồi tốt hơn, nhất quán giữa các nền tảng hơn. Đặc biệt Responsive Web Design được chú trọng hơn cả, những trang web giờ đây phải hiển thị được trên màn hình smartphone trở thành một tiêu chuẩn ngành.
+
+## 2020s AI mọi nơi
+
+Nếu ai đó hỏi, UI/UX vào những năm 2020s có thoái trào không, tôi sẽ nói rằng CÓ. Nhưng đó là chỉ là với những thợ vẽ chuyên nghiệp, hay vibe designer, còn đối với một họa sĩ thực thụ, tay trái anh ta là cây viết, còn tay phải mãi mãi là trái tim và khối óc trong đó. Nếu các bạn thực sự muốn theo đuổi ngành này vào ngày nay, học không thôi chẳng thể đủ, mà phải luôn biết biến bản thân mình vừa mới mẻ, vừa cổ điển, hãy gìn giữ những giá trị cốt lõi, và nắm bắt những điều mới mẻ, kết hợp chúng lại. Xém tí quên, nhất là phải biết vẽ nữa.
+
+## Tổng kết
+
+Mình là một Mobile developer, không phải, vầ cũng không có khiếu UI/UX nhưng những trải nghiệm của mình là độc nhất vô nhị, hi vọng mọi người sẽ yêu thích nó, mình sẽ cập nhật bài viết này với các nghiên cứu sâu hơn về UX trong những số sau, chào tạm biệt và hẹn gặp lại.
 
 
 
