@@ -108,8 +108,107 @@ letItFly(new Sparrow()); // ✅ OK
 ```
 _LSP sẽ giúp code mấy ông siêu rõ ràng, dễ sửa hơn rất là nhiều luôn, và những DEV tới sau sẽ không phải khổ sở ngồi đọc rồi lọ mọ chỉnh này nọ chi cho cực nữa_
 
+Một ví dụ khác về button trong RN, DEV lỏ sẽ cố gắng làm như vầy để disable button
 
+```
+// Base class
+type ButtonProps = {
+  label: string;
+  onPress: () => void;
+};
 
+const BaseButton = ({ label, onPress }: ButtonProps) => (
+  <TouchableOpacity onPress={onPress}>
+    <Text>{label}</Text>
+  </TouchableOpacity>
+);
+
+// Subclass
+const DisabledButton = ({ label }: { label: string }) => (
+  <TouchableOpacity onPress={() => { throw new Error("Disabled!") }}>
+    <Text style={{ color: 'gray' }}>{label}</Text>
+  </TouchableOpacity>
+);
+
+// App
+const App = () => (
+  <>
+    <BaseButton label="Submit" onPress={() => alert('Submitted')} />
+    <DisabledButton label="Can't click" />
+  </>
+);
+```
+Nhưng DEV pro sẽ làm như bên dưới
+```
+type BaseButtonProps = {
+  label: string;
+};
+
+type ClickableButtonProps = BaseButtonProps & {
+  onPress: () => void;
+};
+
+const ClickableButton = ({ label, onPress }: ClickableButtonProps) => (
+  <TouchableOpacity onPress={onPress} style={{ backgroundColor: 'blue' }}>
+    <Text style={{ color: 'white' }}>{label}</Text>
+  </TouchableOpacity>
+);
+
+const DisabledButton = ({ label }: BaseButtonProps) => (
+  <View style={{ backgroundColor: 'gray', opacity: 0.5 }}>
+    <Text style={{ color: 'white' }}>{label}</Text>
+  </View>
+);
+
+// App
+const App = () => (
+  <>
+    <ClickableButton label="Submit" onPress={() => alert('Submitted')} />
+    <DisabledButton label="Disabled" />
+  </>
+);
+```
+Tôi rất hay bị mắc cái lỗi này, và tôi nhận ra rằng, mặc dù code vẫn chạy nhưng nhìn cứ newbie kiểu gì, hãy pro lên hơn nhé, bởi nếu các ông mắc phải, chắc chắn ông sẽ IF ELSE tới tận cùng thế giới đấy ....
+
+## I – Interface Segregation Principle (Nguyên tắc phân tách giao diện)
+
+Không nên ép class phải implement những interface mà nó không cần, quá dễ hiểu, đừng bắt con bạn phải đi hoặc chạy khi nó mới 6 tháng .....
+
+_Các ông nên tách Interface ra càng chuyên biệt càng tốt, có nghĩa rằng, ví dụ như ```Class Camera``` làm ơn đừng có thuộc tính ```hasTripod``` ở trỏng_
+
+## D – Dependency Inversion Principle (Nguyên tắc đảo ngược phụ thuộc)
+
+Nôm na là hãy độc lập, đừng cố phụ thuộc vào ai các ông nhé
+
+Ví dụ bên dưới
+
+```
+interface AuthProvider {
+  login(username: string, password: string): Promise<boolean>;
+}
+
+// Firebase
+class FirebaseAuth implements AuthProvider {
+  async login(username: string, password: string) {
+    console.log("Logging in with Firebase...");
+    return true;
+  }
+}
+
+// Service
+class AuthService {
+  constructor(private provider: AuthProvider) {}
+
+  async signIn(user: string, pass: string) {
+    return this.provider.login(user, pass);
+  }
+}
+```
+_Giờ mấy ông muốn sửa Provider thành AWS hay Azure thay vì Firebase thì cũng sẽ chả ảnh hưởng gì code của AuthService cả, hiểu chứ_
+
+### Kết bài, mặc dù SOLID nó cực hiệu quả trong quản lý code, nhưng nhiều ông sẽ không thấy ngay lợi ích nó mang lại ngay trước mắt, một thời gian sau, khi code dài ra cả chục ngàn dòng, các ông sẽ thấm ngay. Nhưng tôi khuyên thật lòng, đừng bao giờ cố áp dụng triệt để SOLID, thứ nhất không phải khi nào cũng áp dụng tối đa được, thứ 2 áp dụng tối đa sẽ bào mòn sự sáng tạo của các ông đấy, hãy thử và trải nghiệm, tự đúc kết ra trước đã, chúc các ông thành công.
+
+===
 
 
 
